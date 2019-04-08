@@ -1,0 +1,25 @@
+
+<div id="form" class="col-md-offset-3 col-md-6">
+<form method="post" class="col-md-offset-1 col-md-10 col-sm-12 ">
+    <h3 class="text-center">Register a new account</h3>
+    <br>
+    {{#each errorMessages }}
+        <div class="alert alert-danger">
+            {{this.msg}}
+        </div>
+    {{/each}}
+
+    <input type="text" class="form-control" name="name" placeholder="Enter your name" required autofocus>
+    <br>
+    <input type="email" class="form-control" name="email" placeholder="Enter your email" required autofocus>
+    <br>
+    <input type="password" class="form-control" name="password" placeholder="Enter password" required>
+    <br>
+    <input type="password" class="form-control" name="confirmPassword" placeholder="Re-enter password" required>
+    <br>
+
+    <button style="background-color: #006666; color: white;" type="submit" class="btn btn-block">Sign Up</button>
+</form>
+</div>
+
+<div style="min-height:300px;"></div>

@@ -1,0 +1,109 @@
+body {
+  xpadding : 0 10px;
+  margin-top: 60px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html,body {
+  width:100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.CodeMirror {
+  height: 520px;
+}
+
+*, *:before , *:after {
+  -moz-box-sizing : border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#my-video {
+  width: 70%;
+  height: 220px;
+  margin-top: 5px;
+  background-color: #eee;
+}
+
+#second-video {
+  width : 90%;
+  height: 220px;
+  margin-top: 5px;
+  background-color: #00B7FF;
+}
+
+#video-container {
+  text-align: center;
+}
+
+#step1-error, #step2, #step3 {
+  display: none;
+}
+
+#my-id {
+  font-weight: bold;
+}
+
+.navbar-inverse {
+  background-image: linear-gradient(to bottom,#328484 0,#4c9393 100%);
+  border: 0px;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 24px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  font-size: 18px;
+  color: #ddd;
+}
+
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: white;
+}
+
+#about {
+    height: 350px;
+    box-shadow: 1px 3px 10px rgba(127,178,178);
+}
+
+#form {
+  height: 400px;
+  box-shadow: 1px 3px 10px rgba(127,178,178);
+}
+
+#login{
+  height: 250px;
+  box-shadow: 1px 3px 10px rgba(127,178,178);
+}
+
+#about:hover {
+  box-shadow: 1px 3px 10px 2px rgba(127,178,178);
+}
+
+#contact:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+  }
+  #video-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 120px;
+  }
+
+  #videobox , #chatbox {
+    display: none;
+  }

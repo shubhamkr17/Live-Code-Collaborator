@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">CodeCollab</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          {{#if user}}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">{{user.name}} <span class="caret"></span></a>
+
+              <ul class="dropdown-menu">
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </li>
+            
+          {{else}}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {{!-- <div class="container-fluid">
+    <img class="img-responsive" src="{{../public/images/bg.jpg}}" alt="">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div id="about" class="col-md-12 text-center">
+        <h2 style="font-weight: bold; color: #003d3d" class="text-lead">About Us</h2>
+      </div>
+    </div>
+  </div> --}}
+
+    <div class="container">
+      {{{body}}}
+    </div>
+
+  <div class="container-fluid" style="background-color: #005b5b; margin: 15px 0;">
+    <div class="row" style="padding: 15px 0;">
+      <div class="text-center">
+        <span style="color: white">&copy;Asymptote 2019</span>
+        <a id="contact" href="/contact">&nbsp;&nbsp;Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  
+
+    
+  {{!-- <script src="../public/javascripts/script.js"></script> --}}
+
+  <script>
+      $("#chat-btn").click(function(){
+        $("#chatbox").toggle();
+        console.log("clicked");
+      });
+      $("#video-btn").click(function(){
+        $("#videobox").toggle();
+        console.log("clicked");
+      });
+  </script>
+  </body>
+</html>
